@@ -1,49 +1,77 @@
+/* Improtamos el estilo de la letra que queremos usar */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+
+
 body{
-    background-image: linear-gradient(to left, rgb(182, 178, 184, 0.5) 0%, rgb(157, 158, 163, 0.5) 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
-    background-blend-mode: normal, lighten, soft-light;
+    /* Establecemos las propiedades del cuerpo de la pagina */
+    margin: 0;
+    min-height: 100vh;
+    /* Esto es para establecer la imagen de fondo de la pagina */
+    background-image: url(../images/cat.jpeg);
+    /* Esto para que la imagen introducida anteriormente NO se repita*/
+    background-repeat: no-repeat;
+    /* Esta propiedad hace que la imagen se ajuste al fondo donde fue agregada */
+    background-size: cover;
+    /* Establecer la posicion */
+    background-position: center;
+    /* Establece que la imagen se quede quieta a pesar del movimiento de la pagina*/
+    background-attachment: fixed;
+}
+
+body::before{
+    /* Esto lo uso para que podamos aplicar estilos a la pagina */
+    content: "";
+    /* Esto es para que lo ingresado llevene toda la zona determinada en este caso TODO el body*/
+    width: 100%;
+    /* Establece la altura minima */
+    min-height: 100vh;
+    /* Define la posicion */
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /* Agregamos el degradado que queremos implementar */
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    /* Establecemos la opacidad del degradado, de no cambiarlo, cubrirla toda la imagen que esta de fondo */
+    opacity: 0.5;
 }
 
 
 .body2 {
     margin: 0;
+    /* Establecemos la typografia */
     font-family: "Roboto Condensed", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
 
-
-
+    /* Posicion del texto */
     text-align: center;
+    /* color del texto */
     color:white;
     position: fixed;
+    /* Estacio desde la izquierda */
     left: 480px;
+    /* Espacio desde el texto hasta la parte mas abaja de la pagina*/
     bottom: 400px;
 }
 
 .Titulo1 {
+    /* Tamaño de la letra*/
     font-size: 70px;
 }
-/*
-.botton {
-    text-align: center;
-    color: rgb(255, 255, 255);
-    padding: 15px;
-    background-color: rgb(0, 0, 0); 
-    max-width: 50%;
-    border: 2px rgb(119, 119, 119);
-    border-radius: 10px;
-    margin: auto;
-}
-    */
+
 
 .botton a:link, a:visited{
+    /* Propiedades del boton */
     background-color: #000000;
     color: white;
     padding: 15px 25px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    /* Le creamos un borde y lo suavisamos */
     border: 2px rgb(119, 119, 119);
     border-radius: 10px;
     margin: auto;
@@ -56,11 +84,13 @@ body{
 }
 
 .botton a:hover, a:active {
+    /* Cuando el maus pase por encima del boton, se le cambien la propiedades a las ingresadas acontinuacion */
     color:rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
 } 
 
 .wave {
+    /* Para posicionar el elemento en un lugar en especifico */
     position: absolute;
     bottom: 0;
     left: 0;
